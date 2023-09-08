@@ -43,12 +43,14 @@ include_once(G5_PATH.'/head.php');
                         <div class="product_info_up">
                             <div class="kt4_prod_info info-tit">
                                 <h1 class="info-title">
-                                    <p class="agency">어도어</p>
-                                    <p class="info-album">
+                                    <span class="agency">어도어</span>
+                                    <span class="info-album">
                                         NEWJEANS(뉴진스) - 2ND EP [GET UP] [THE POWERPUFF GIRLS X NJ
                                         BOX VER] (랜덤버전)
-                                    </p>
-                                    <p class="info-albumtit">NEWJEANS(뉴진스)-2ND EP[GET UP]</p>
+                                    </span>
+                                    <span class="info-albumtit"
+                                        >NEWJEANS(뉴진스)-2ND EP[GET UP]</span
+                                    >
                                 </h1>
                             </div>
                             <div class="kt4_prod_info info-price">
@@ -454,8 +456,7 @@ include_once(G5_PATH.'/head.php');
                     />
                 </div>
             </section>
- </div>
-
+        </div>
 
 <!-- 여기 아래부터 모든 HTML 요소 구성 끝 -->
 <?php

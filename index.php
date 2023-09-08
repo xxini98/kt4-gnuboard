@@ -17,7 +17,8 @@ if (G5_IS_MOBILE) {
 include_once(G5_PATH.'/head.php');
 ?>
 
-            <div class="wrap">
+<div class="wrap">
+                <div class="main_wrap">
                 <section class="main-wrapper">
                     <div class="mianslide">
                         <h2 class="blind">EVENT</h2>
@@ -48,7 +49,7 @@ include_once(G5_PATH.'/head.php');
                                                     </p>
                                                 </div>
                                                 <div class="slider_info-bottom s1">
-                                                    <a href="./item_view.php">READ MORE</a>
+                                                    <a href="item_view.html">READ MORE</a>
                                                 </div>
                                             </div>
                                             <div class="swiper-slide is-content">
@@ -134,7 +135,7 @@ include_once(G5_PATH.'/head.php');
                                                             TREASURE
                                                         </p>
                                                         <p class="slider-title-text-nth">
-                                                            3rd ANNIVERSARY <br>MAGAZINE
+                                                            3rd ANNIVERSARY MAGAZINE
                                                         </p>
                                                         <p class="slider-title-text-albumtit"></p>
                                                     </div>
@@ -261,7 +262,7 @@ include_once(G5_PATH.'/head.php');
                     <h2 class="blind">EVENT</h2>
                     <div class="evenTab evt1">
                         <div class="eventcontent">
-                            <a href="./event.php">
+                            <a href="javascript:void(0)">
                                 <img
                                     src="./images/main/EVENT_STAYC.jpg"
                                     alt="STAYC TEENFRESH 컴백 기념 특전 증정"
@@ -1271,7 +1272,7 @@ include_once(G5_PATH.'/head.php');
                                 >Ktown4u를 오프라인 매장에서 만나볼 수 있는 기회! <br />
                                 Ktown4u 매장을 찾아보세요!</span
                             >
-                            <button class="offline_button">바로가기</button>
+                            <span class="offline_button">바로가기</span>
                         </a>
                     </div>
                 </section>
@@ -1372,11 +1373,11 @@ include_once(G5_PATH.'/head.php');
                             </div>
                             <div class="swiper-scrollbar is-brand"></div>
                         </div>
-                        <a href="javascript:voidP(0)" class="brandshop-header-info2">더보기</a>
+                        <a href="javascript:void(0)" class="brandshop-header-info2">더보기</a>
                     </div>
                 </section>
-                </div>
-
+            </div>
+            </div>
  <div class="latest_top_wr">
   <div class="container">
     <?php

@@ -15,8 +15,8 @@ include_once(G5_PATH.'/head.php');
 
 
 <div class="wrap container">
-  <div class="event_main-wrap">
-      <section class="event_main-header">
+            <div class="event_main-wrap">
+                <section class="event_main-header">
                     <h1 class="ectit event-header-title">이벤트</h1>
                     <ul class="ehl event-header-list1">
                         <li class="er-list event-list">
@@ -82,9 +82,7 @@ include_once(G5_PATH.'/head.php');
                     </div>
                 </section>
             </div>
- </div>
-
-
+        </div>
 
 <!-- 여기 아래부터 모든 HTML 요소 구성 끝 -->
 <?php

@@ -18,6 +18,21 @@ if (G5_IS_MOBILE) {
 <hr>
 
 <!-- 하단 시작 { -->
+
+
+<?php
+if(G5_DEVICE_BUTTON_DISPLAY && !G5_IS_MOBILE) { ?>
+<?php
+}
+
+if ($config['cf_analytics']) {
+    echo $config['cf_analytics'];
+}
+?>
+</div>
+<!-- } 하단 끝 -->
+
+
 <div id="ft">
 <section class="footer_first-wrap">
         <div class="ft_sec container">
@@ -213,18 +228,6 @@ if (G5_IS_MOBILE) {
     });
     </script>
 </div>
-
-<?php
-if(G5_DEVICE_BUTTON_DISPLAY && !G5_IS_MOBILE) { ?>
-<?php
-}
-
-if ($config['cf_analytics']) {
-    echo $config['cf_analytics'];
-}
-?>
-</div>
-<!-- } 하단 끝 -->
 
 <script>
 $(function() {

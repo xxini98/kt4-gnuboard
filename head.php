@@ -38,7 +38,7 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
     ?>
 
 
-
+<div id="main">
     <div id="hd_wrapper">
         <div class="inner">
             <div id="logo">
@@ -92,7 +92,6 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
                             </button>
                         </div>
                     </div>
-                    <div id="gnb_all_bg"></div>
                     <div id="search_all">
                         <div class="hd_sch_wr">
                                 <fieldset id="hd_sch">
@@ -179,6 +178,7 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
                             <li class="gnb_empty">메뉴 준비 중입니다.<?php if ($is_admin) { ?> <a href="<?php echo G5_ADMIN_URL; ?>/menu_list.php">관리자모드 &gt; 환경설정 &gt; 메뉴설정</a>에서 설정하실 수 있습니다.<?php } ?></li>
                         <?php } ?>
                     </ul>
+                    
                 </div>
 
               </nav>
@@ -196,16 +196,17 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
                     });
                 });
             </script>
-            
+                            <div id="gnb_all_bg"></div>
+
         </div>
     </div>  
     
-</div>
 <!-- } 상단 끝 -->
 
 
 <hr>
 
 <!-- 콘텐츠 시작 { -->
-  <div id="main">
 <?php if (!defined("_INDEX_")) { ?><h2 id="container_title"><span title="<?php echo get_text($g5['title']); ?>"><?php echo get_head_title($g5['title']); ?></span></h2><?php }
+
+    

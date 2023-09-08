@@ -59,7 +59,7 @@ if($config['cf_add_meta'])
 <?php
 if (defined('G5_IS_ADMIN')) {
     if(!defined('_THEME_PREVIEW_'))
-        echo '<link rel="stylesheet" href="'.run_replace('head_css_url', G5_CSS_URL.'/default.css?ver='.G5_CSS_VER, G5_URL).'">'.PHP_EOL;
+        echo '<link rel="stylesheet" href="'.run_replace('head_css_url', G5_ADMIN_URL.'/css/admin.css?ver='.G5_CSS_VER, G5_URL).'">'.PHP_EOL;
 } else {
     $shop_css = '';
     if (defined('_SHOP_')) $shop_css = '_shop';
@@ -107,7 +107,9 @@ add_javascript('<script src="'.G5_JS_URL.'/placeholders.min.js"></script>', 0);
 add_javascript('<script src="'.G5_JS_URL.'/main.js"></script>', 0);
 add_stylesheet('<link rel="stylesheet" href="'.G5_JS_URL.'/font-awesome/css/font-awesome.min.css">', 0);
 add_stylesheet('<link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css">', 0);
-add_stylesheet('<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round">', 0);
+add_stylesheet('<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined">', 0);
+add_stylesheet('<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons">', 0);
+add_stylesheet('<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons+Roundd">', 0);
 add_stylesheet('<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">', 0);
 add_stylesheet('<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">', 0);
 add_stylesheet('<link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css">', 0);
@@ -119,12 +121,14 @@ if(G5_IS_MOBILE) {
 if(!defined('G5_IS_ADMIN'))
     echo $config['cf_add_script'];
 ?>
+
+
 <?php
 include_once ('/dist/css');
 ?>
-<!-- <link rel="stylesheet" href="https://iammes.cafe24.com/gnuboard5/dist/css/comm.css" /> -->
+<link rel="stylesheet" href="https://iammes.cafe24.com/gnuboard5/dist/css/comm.css" />
 <!-- 위의 링크처럼 쓰거나 아래 링크처럼 사용하기! -->
-<link rel="stylesheet" href="/gnuboard5/dist/css/comm.css" />
+<!-- <link rel="stylesheet" href="/gnuboard5/dist/css/comm.css" /> -->
 <!-- <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"

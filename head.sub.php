@@ -55,6 +55,8 @@ if($config['cf_add_meta'])
     echo $config['cf_add_meta'].PHP_EOL;
 ?>
 <title><?php echo $g5_head_title; ?></title>
+<link rel="stylesheet" href="https://iammes.cafe24.com/gnuboard5/dist/css/comm.css" />
+<!-- <link rel="stylesheet" href="https://iammes.cafe24.com/gnuboard5/dist/scss/comm.scss" /> -->
 
 <?php
 if (defined('G5_IS_ADMIN')) {
@@ -63,8 +65,8 @@ if (defined('G5_IS_ADMIN')) {
 } else {
     $shop_css = '';
     if (defined('_SHOP_')) $shop_css = '_shop';
-    // echo '<link rel="stylesheet" href="'.run_replace('head_css_url', G5_CSS_URL.'/'.(G5_IS_MOBILE?'mobile':'default').$shop_css.'.css?ver='.G5_CSS_VER, G5_URL).'">'.PHP_EOL;
-    echo '<link rel="stylesheet" href="'.run_replace('head_css_url', G5_CSS_URL.'/default.css?ver='.G5_CSS_VER, G5_URL).'">'.PHP_EOL;
+    echo '<link rel="stylesheet" href="'.run_replace('head_css_url', G5_CSS_URL.'/'.(G5_IS_MOBILE?'mobile':'default').$shop_css.'.css?ver='.G5_CSS_VER, G5_URL).'">'.PHP_EOL;
+    // echo '<link rel="stylesheet" href="'.run_replace('head_css_url', G5_CSS_URL.'/default.css"> <link rel="stylesheet" href="/gnuboard5/dist/scss/comm.scss?ver='.G5_CSS_VER, G5_URL).'">'.PHP_EOL;
 }
 ?>
 
@@ -104,7 +106,7 @@ add_javascript('<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundl
 add_javascript('<script src="'.G5_JS_URL.'/common.js?ver='.G5_JS_VER.'"></script>', 0);
 add_javascript('<script src="'.G5_JS_URL.'/wrest.js?ver='.G5_JS_VER.'"></script>', 0);
 add_javascript('<script src="'.G5_JS_URL.'/placeholders.min.js"></script>', 0);
-add_javascript('<script src="'.G5_JS_URL.'/main.js"></script>', 0);
+add_javascript('<script defer src="'.G5_JS_URL.'/main.js"></script>', 0);
 add_stylesheet('<link rel="stylesheet" href="'.G5_JS_URL.'/font-awesome/css/font-awesome.min.css">', 0);
 add_stylesheet('<link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css">', 0);
 add_stylesheet('<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined">', 0);
@@ -126,7 +128,7 @@ if(!defined('G5_IS_ADMIN'))
 <?php
 include_once ('/dist/css');
 ?>
-<link rel="stylesheet" href="https://iammes.cafe24.com/gnuboard5/dist/css/comm.css" />
+<!-- <link rel="stylesheet" href="https://iammes.cafe24.com/gnuboard5/dist/css/comm.css" /> -->
 <!-- 위의 링크처럼 쓰거나 아래 링크처럼 사용하기! -->
 <!-- <link rel="stylesheet" href="/gnuboard5/dist/css/comm.css" /> -->
 <!-- <link

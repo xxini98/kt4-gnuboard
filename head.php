@@ -37,47 +37,72 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
     }
     ?>
 
-
-<div id="main">
-<div id="hd_wrapper">
+<div id="tnb">
         <div class="inner">
+			<ul id="hd_qnb">
+	            <li><a href="<?php echo G5_BBS_URL ?>/faq.php">FAQ</a></li>
+	            <li><a href="<?php echo G5_BBS_URL ?>/qalist.php">Q&A</a></li>
+	            <!-- <li><a href="<?php echo G5_BBS_URL ?>/new.php">새글</a></li> -->
+	            <!-- <li><a href="<?php echo G5_BBS_URL ?>/current_connect.php" class="visit">접속자<strong class="visit-num"><?php echo connect(); // 현재 접속자수, 테마의 스킨을 사용하려면 스킨을 theme/basic 과 같이 지정 ?></strong></a></li> -->
+                <?php if ($is_member) {  ?>
+                <li><a href="<?php echo G5_BBS_URL ?>/member_confirm.php?url=<?php echo G5_BBS_URL ?>/register_form.php">마이페이지</a></li>
+                <li><a href="<?php echo G5_BBS_URL ?>/logout.php">로그아웃</a></li>
+                <?php if ($is_admin) {  ?>
+                <li class="tnb_admin"><a href="<?php echo correct_goto_url(G5_ADMIN_URL); ?>">관리자</a></li>
+                <?php }  ?>
+                <?php } else {  ?>
+                <li><a href="<?php echo G5_BBS_URL ?>/register.php">회원가입</a></li>
+                <li><a href="<?php echo G5_BBS_URL ?>/login.php">로그인</a></li>
+                <?php }  ?>
+            </ul>
+            
+		</div>
+    </div>
+</div>
+
+  <header>
+  <div class="widget">
+        <div class="js-sticky-widget">
+          <div class="inner">
             <div id="logo">
-                <a href="/gnuboard5">Ktwon4u - 케이타운포유</a>
-                <div class="util">
-                    <button type="button" class="gnb_btn gnb_search_btn" title="검색">
-                        <i class="fa fa-search" aria-hidden="true"></i>
-                        <span class="sound_only">검색</span>
-                    </button>
-                    <button type="button" class="gnb_btn gnb_menu_btn" title="전체메뉴">
-                        <i class="fa fa-bars" aria-hidden="true"></i>
-                        <span class="sound_only">전체메뉴열기</span>
-                    </button>
-                    
-                 
-
-
-
-
-                    
-            <script>
-                $(function(){
-                    $(".gnb_menu_btn").click(function(){
+              <a href="https://xxini.me/KT4">Ktwon4u - 케이타운포유</a>
+            </div>
+            <div class="util">
+               <button type="button" class="gnb_btn gnb_search_btn" title="검색">
+              <span class="sound_only">검색</span>
+              </button>
+               <button type="button" class="gnb_btn gnb_cart_btn" title="장바구니">
+              <span class="sound_only">장바구니</span>
+              </button>
+               <button type="button" class="gnb_btn gnb_mypage_btn" title="마이페이지">
+              <span class="sound_only">마이페이지</span>
+              </button>
+              <button type="button" class="gnb_btn gnb_menu_btn" title="전체메뉴">
+                <span class="sound_only">전체메뉴열기</span>
+              </button> 
+                <script>
+               $(function(){
+                    $(".gnb_menu_btn").click(function(event){
+                        event.stopPropagation(); // 이벤트 버블링 차단
                         $("#gnb_all, #gnb_all_bg").show();
+                        $(".gnb_wrapper #gnb_all").addClass("on")
                     });
-                    $(".gnb_close_btn, #gnb_all_bg").click(function(){
+                    $(".gnb_close_btn, #gnb_all_bg").click(function(event){
+                        event.stopPropagation(); // 이벤트 버블링 차단
                         $("#gnb_all, #gnb_all_bg").hide();
+                        $(".gnb_wrapper #gnb_all").removeClass("on")
                     });
 
-                    $(".gnb_search_btn").on("click", function(){
-                        $("#search_all").toggle()
+                    $(".gnb_search_btn").on("click", function(event){
+                        event.stopPropagation(); // 이벤트 버블링 차단
+                        $("#search_all").toggle();
                     });
-                });
-            </script>
-                </div>
-    </div>  
-    </div>  
 
-    <nav id="gnb">
+                  });
+                </script>
+            </div>
+
+          <nav id="gnb">
         <h2>메인메뉴</h2>
         <div class="gnb_wrap">
             <ul id="gnb_1dul">
@@ -118,8 +143,13 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
                     <li class="gnb_empty">메뉴 준비 중입니다.<?php if ($is_admin) { ?> <a href="<?php echo G5_ADMIN_URL; ?>/menu_list.php">관리자모드 &gt; 환경설정 &gt; 메뉴설정</a>에서 설정하실 수 있습니다.<?php } ?></li>
                 <?php } ?>
             </ul>
-            <div id="gnb_all">
-                <h2>전체메뉴</h2>
+        </div>
+    </nav>
+    
+    <div class="gnb_wrapper">
+    <div id="gnb_all" style="z-index: 9000;">
+      <div class="inner">
+                <h2 class="blind">전체메뉴</h2>
                 <ul class="gnb_al_ul">
                     <?php
                     
@@ -151,9 +181,24 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
                         <li class="gnb_empty">메뉴 준비 중입니다.<?php if ($is_admin) { ?> <br><a href="<?php echo G5_ADMIN_URL; ?>/menu_list.php">관리자모드 &gt; 환경설정 &gt; 메뉴설정</a>에서 설정하실 수 있습니다.<?php } ?></li>
                     <?php } ?>
                 </ul>
-                <button type="button" class="gnb_close_btn"><i class="fa fa-times" aria-hidden="true"></i></button>
-            </div>
-            <div id="gnb_all_bg"></div>
+                <button type="button" class="gnb_nav_b gnb_search_btn"></button>
+                <button type="button" class="gnb_nav_b gnb_cart_btn"></button>
+                <button type="button" class="gnb_nav_b gnb_mypage_btn"></button>
+                <button type="button" class="gnb_nav_b gnb_close_btn"></button>
+                <script>
+                  $(function (){
+                    $(".gnb_al_li a").on("click",function(){
+                      $(".gnb_al_li > ul").addClass("on")
+                    })
+                    $(".gnb_al_li a").on("click",function(){
+                      $(".gnb_al_li > ul").removeClass("on")
+                      $(this).parent().addClass("on")
+                    })
+                  })
+                </script>
+                </div>
+              </div>
+              <div id="gnb_all_bg"></div>
             <div id="search_all">
                     <div class="hd_sch_wr">
             <fieldset id="hd_sch">
@@ -194,21 +239,27 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
 
                     return true;
                 }
+                
                 </script>
             </fieldset>
                 
             <?php echo popular(); // 인기검색어, 테마의 스킨을 사용하려면 스킨을 theme/basic 과 같이 지정  ?>
         </div>
-                    </div>
-        </div>
-    </nav>
-              </div>
+       </div>  
+  </div>
+  </div>
+      </div>  
+      </div>
+    
+
+   
+ </header>
 <!-- } 상단 끝 -->
 
 
 <hr>
 
+
+<div id="main">
 <!-- 콘텐츠 시작 { -->
 <?php if (!defined("_INDEX_")) { ?><h2 id="container_title"><span title="<?php echo get_text($g5['title']); ?>"><?php echo get_head_title($g5['title']); ?></span></h2><?php }
-
-    

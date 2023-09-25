@@ -354,8 +354,7 @@ include_once(G5_PATH.'/head.php');
                           <div class="prebx-capsule-img">
                             <img
                               src="./images/main/PREORDER_1NCT2023.jpg"
-                              alt="19% [예약] [케타포 Special Gift]
-                                                        NCT 2023 - Golden Age (랜덤버전) 19300원"
+                              alt="19% [예약] [케타포 Special Gift] NCT 2023 - Golden Age (랜덤버전) 19300원"
                             />
                           </div>
                           <div class="prebx-capsule-text">
@@ -378,8 +377,7 @@ include_once(G5_PATH.'/head.php');
                           <div class="prebx-capsule-img">
                             <img
                               src="./images/main/PREORDER_2riize.jpg"
-                              alt="19% [예약] 라이즈(RIIZE) -
-                                                        Get A Guitar (랜덤버전) 14,900원"
+                              alt="19% [예약] 라이즈(RIIZE) - Get A Guitar (랜덤버전) 14,900원"
                             />
                           </div>
                           <div class="prebx-capsule-text">
@@ -402,8 +400,7 @@ include_once(G5_PATH.'/head.php');
                           <div class="prebx-capsule-img">
                             <img
                               src="./images/main/PREORDER_3somi.jpg"
-                              alt="19% [예약] 전소미(JEON SOMI) - 
-                                                        GAME PLAN (랜덤버전) 19300원"
+                              alt="19% [예약] 전소미(JEON SOMI) - GAME PLAN (랜덤버전) 19300원"
                             />
                           </div>
                           <div class="prebx-capsule-text">
@@ -426,8 +423,7 @@ include_once(G5_PATH.'/head.php');
                           <div class="prebx-capsule-img">
                             <img
                               src="./images/main/PREORDER_4everglow.png"
-                              alt="19% [예약] [영상통화 사인이벤트]
-                                                        에버글로우(EVERGLOW) - ALL MY GIRLS 28,200원"
+                              alt="19% [예약] [영상통화 사인이벤트] 에버글로우(EVERGLOW) - ALL MY GIRLS 28,200원"
                             />
                           </div>
                           <div class="prebx-capsule-text">
@@ -451,8 +447,7 @@ include_once(G5_PATH.'/head.php');
                           <div class="prebx-capsule-img">
                             <img
                               src="./images/main/PREORDER_5V2.png"
-                              alt="19%[예약] [케타포 Special Gift]
-                                                        V - Layover (랜덤버전) 19300원"
+                              alt="19%[예약] [케타포 Special Gift] V - Layover (랜덤버전) 19300원"
                             />
                           </div>
                           <div class="prebx-capsule-text">
@@ -475,8 +470,7 @@ include_once(G5_PATH.'/head.php');
                           <div class="prebx-capsule-img">
                             <img
                               src="./images/main/PREORDER_6seventeen.jpg"
-                              alt="19% [예약] [재발매]
-                                                        세븐틴(SEVENTEEN) - YOU MAKE MY DAY 17100원"
+                              alt="19% [예약] [재발매] 세븐틴(SEVENTEEN) - YOU MAKE MY DAY 17100원"
                             />
                           </div>
                           <div class="prebx-capsule-text">
@@ -510,6 +504,16 @@ include_once(G5_PATH.'/head.php');
                 <img
                   src="./images/main/OFFICIAL_LIGHT_STICK_1024.png"
                   class="tablet_img"
+                  alt="OFFICIAL LIGHT STICK Ktown4u에서만 만날 수 있는 응원봉!"
+                />
+                <img
+                  src="./images/main/OFFICIAL_LIGHT_STICK_768.png"
+                  class="mobile_img"
+                  alt="OFFICIAL LIGHT STICK Ktown4u에서만 만날 수 있는 응원봉!"
+                />
+                <img
+                  src="./images/main/OFFICIAL_LIGHT_STICK_428.png"
+                  class="mobile_img2"
                   alt="OFFICIAL LIGHT STICK Ktown4u에서만 만날 수 있는 응원봉!"
                 />
               </div>

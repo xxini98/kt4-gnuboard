@@ -1,11 +1,10 @@
 @charset "utf-8";
 
 /* 게시판 목록 */
-#bo_list {
-    position: relative;
-    max-width: 1280px;
-    margin: 0 auto 20px;
+#gnb #gnb_1dul {
+  display: none;
 }
+
 #bo_list:after {
     display: block;
     visibility: hidden;

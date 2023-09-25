@@ -264,7 +264,7 @@ header {
   background: var(--secondary);
 }
 #search_all::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -11px;
   left: 110px;
@@ -294,7 +294,6 @@ header {
   background: var(--w);
   border: 0;
   border-right: 0;
-  font-size: 1.25em;
   color: #151515;
 }
 #hd_sch #sch_submit {
@@ -480,6 +479,7 @@ header {
   margin-left: 20px;
   background: var(--w);
 }
+
 .util .gnb_search_btn.close {
   position: relative;
   background: var(--secondary);
@@ -493,7 +493,8 @@ header {
   height: 24px;
   transform: translate(-50%, -50%);
   background-size: cover;
-  background-image: url(https://iammes.cafe24.com/gnuboard5/images/comm/blue_x.svg);}
+  background-image: url(https://iammes.cafe24.com/gnuboard5/images/comm/blue_x.svg);
+}
 .util .gnb_btn:hover {
   width: 50px;
   height: 50px;
@@ -547,22 +548,29 @@ header {
   background-size: cover;
   background-image: url(https://iammes.cafe24.com/gnuboard5/images/comm/blue_search.svg);
 }
+.util .gnb_mypage_btn {
+  position: relative;
+}
 .gnb_mypage_btn:hover .myonly {
   display: block;
 }
 .gnb_mypage_btn .myonly {
   position: absolute;
   top: 50px;
-  left: -25px;
+  left: 50%;
+  transform: translateX(-50%);
   display: none;
-  width: 100px;
   text-align: left;
   border-radius: 25px;
   padding: 10px 20px;
   background: var(--secondary);
 }
+.myonly li {
+  white-space: nowrap;
+}
 .myonly li a {
   line-height: 30px;
+  font-size: 13px;
 }
 .myonly li:hover a {
   font-weight: 900;
@@ -573,10 +581,11 @@ header {
   position: absolute;
   display: block;
   top: -41px;
-  left: -20%;
+  left: 8%;
   width: 50px;
   height: 50px;
   z-index: -1;
+  transform: translateX(-50%);
   border-radius: 50%;
   box-shadow: 25px 15px 0px 0px var(--secondary);
 }
@@ -585,7 +594,7 @@ header {
   position: absolute;
   display: block;
   top: -41px;
-  left: 70%;
+  left: 68%;
   width: 50px;
   height: 50px;
   z-index: -1;
@@ -926,9 +935,11 @@ a.gnb_2da:hover {
 }
 #container_title {
   font-size: 1.333em;
-  margin: 0 auto;
+  /* margin: 0 auto;
   width: 1280px;
-  padding: 50px 0 20px;
+  padding: 50px 0 20px; */
+  max-width: 1280px;
+  margin: 110px auto 0 ;
   font-weight: bold;
 }
 #container_title span {
@@ -937,6 +948,7 @@ a.gnb_2da:hover {
   margin-bottom: 40px;
   display: block;
 }
+
 
 .lt_wr {
   width: 32%;
@@ -2178,7 +2190,7 @@ textarea.required {
     line-height: 35px;
   }
   .gnb_1da {
-    font-size: 13px;  
+    font-size: 13px;
   }
 }
 @media screen and (max-width: 1440px) {
@@ -2188,13 +2200,13 @@ textarea.required {
   #search_all {
     right: 45px;
   }
-  #gnb_all .gnb_nav_b{
+  #gnb_all .gnb_nav_b {
     margin-left: 15px;
   }
   #gnb_all .gnb_mypage_btn {
     right: 94px;
   }
-  #gnb_all .gnb_cart_btn{
+  #gnb_all .gnb_cart_btn {
     right: 159px;
   }
   #gnb_all .gnb_search_btn {
@@ -2203,7 +2215,7 @@ textarea.required {
 }
 
 /* 1280px 이하일 경우 */
-@media screen and (max-width : 1280px){
+@media screen and (max-width: 1280px) {
   #gnb #gnb_1dul {
     display: none;
   }
@@ -2218,6 +2230,9 @@ textarea.required {
 @media screen and (max-width: 1024px) {
   #gnb_all .gnb_al_li .gnb_al_a:hover::after {
     height: 6px;
+  }
+  #gnb_all .gnb_al_li .gnb_al_a {
+    font-size: 18px;
   }
 }
 
@@ -2240,10 +2255,4 @@ textarea.required {
 
 /* 작은 mobile */
 @media screen and (max-width: 428px) {
-  /* #hd_pop,
-    .inner,
-    #container_wr,
-    #ft_wr {
-        padding: 0 2px;
-    } */
 }

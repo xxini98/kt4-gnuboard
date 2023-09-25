@@ -111,7 +111,7 @@ add_stylesheet('<link rel="stylesheet" href="'.G5_JS_URL.'/font-awesome/css/font
 add_stylesheet('<link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css">', 0);
 add_stylesheet('<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined">', 0);
 add_stylesheet('<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons">', 0);
-add_stylesheet('<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons+Roundd">', 0);
+add_stylesheet('<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons+Round">', 0);
 add_stylesheet('<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">', 0);
 add_stylesheet('<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">', 0);
 add_stylesheet('<link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css">', 0);

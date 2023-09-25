@@ -674,24 +674,38 @@ legend {
   }
 }
 @media screen and (max-width: 768px) {
+  .ft_sec.container {
+    width: 100%;
+    flex-wrap: wrap;
+  }
   .footer_first-wrap .ft_cscenter {
-    width: 30%;
+    width: 50%;
+    margin-bottom: 30px;
+    p {
+      display: flex;
+      width: 50%;
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
+  }
+  .ft_community {
+    width: 50%;
+    margin-bottom: 30px;
   }
   .footer_first-wrap .ft_community .ft_com-ul {
-    flex-wrap: nowrap;
-    flex-direction: column;
+    width: 100%;
+    flex-wrap: wrap;
   }
   .footer_first-wrap .ft_community .ft_com-ul .ft_com-li {
-    width: 60%;
+    width: 50%;
     margin-bottom: 15px;
   }
   .footer_first-wrap .ft_company {
-    width: 30%;
+    width: 100%;
   }
   .footer_first-wrap .ft_company .ft_company-ul {
     width: 100%;
     justify-content: space-between;
-    flex-wrap: wrap;
   }
   .footer_first-wrap .ft_company .ft_company-ul .ft_company-li a {
     display: flex;
@@ -708,9 +722,65 @@ legend {
     .ft_company-ul
     .ft_company-li
     .ft_company-icon {
-    margin: 0;
+    margin-bottom: 20px;
+  }
+  .footer_second-wrap .ft_sec .ft_sec-li {
+    float: none;
+    margin-right: 0;
+  }
+  .footer_second-wrap .ft_sec .ft_sec-company::before,
+  .footer_second-wrap .ft_sec .ft_sec-cpnum::before,
+  .footer_second-wrap .ft_sec .ft_sec-num::before {
+    display: none;
+  }
+  .footer_first-wrap
+    .ft_company
+    .ft_company-ul
+    .ft_company-li
+    .ft_company-icon:hover {
+    display: none;
+  }
+  .footer_second-wrap
+    .ft_sec
+    .ft_sec-sns
+    .ft_sns-ul
+    .ft_sns
+    .ft_sns-icon:hover {
+    display: none;
+  }
+  .footer_second-wrap .ft_sec .ft_sec-dadd strong {
+    white-space: nowrap;
   }
 }
+
+@media screen and (max-width: 428px) {
+  .footer_first-wrap .ft_cscenter {
+    width: 100%;
+  }
+  .ft_community {
+    width: 100%;
+  }
+  .footer_second-wrap .ft_sec .ft_sec-li strong,
+  .footer_second-wrap .ft_sec .ft_sec-li span {
+    font-size: 12px;
+  }
+  .footer_second-wrap .ft_sec .fi_sec-ul {
+    margin-top: 60px;
+  }
+  .footer_second-wrap .ft_sec .ft_sec-li {
+    float: none;
+    margin-right: 0;
+  }
+
+  .footer_second-wrap .ft_sec .ft_sec-li strong::after {
+    right: -7px;
+  }
+  .footer_second-wrap .ft_sec .ft_sec-sns {
+    top: 50px;
+    left: 30px;
+  }
+}
+
 .container.is-slider {
   position: relative;
   padding: 0;
@@ -1288,7 +1358,12 @@ legend {
 .ad_kt4 .ad_kt4_img .tablet_img {
   display: none;
 }
-
+.ad_kt4 .ad_kt4_img .mobile_img {
+  display: none;
+}
+.ad_kt4 .ad_kt4_img .mobile_img2 {
+  display: none;
+}
 .new_life-wrap {
   position: relative;
   width: 100%;
@@ -1892,6 +1967,12 @@ legend {
     -o-object-fit: cover;
     object-fit: cover;
   }
+  .ad_kt4 .ad_kt4_img .mobile_img {
+    display: none;
+  }
+  .ad_kt4 .ad_kt4_img .mobile_img2 {
+    display: none;
+  }
   .chart_4-add .chart_4-add-contents .chart_4-add-album {
     width: 200px;
     overflow: hidden;
@@ -1899,7 +1980,7 @@ legend {
     white-space: nowrap;
   }
   .ktown4u_offline .ktown4u_offline-wrap {
-    background-position: 0% 10%;
+    background-position: 30% 10%;
   }
 }
 @media screen and (max-width: 1280px) {
@@ -2169,6 +2250,9 @@ legend {
     text-overflow: ellipsis;
     white-space: nowrap;
   }
+  .ktown4u_offline .ktown4u_offline-wrap {
+    background-position: 40% 10%;
+  }
   .brandshop-wrap .brandshop-header-info2 {
     font-size: 0;
   }
@@ -2307,6 +2391,19 @@ legend {
   .prebx-capsule-text .capsule-title {
     width: 170px;
     margin-top: 10px;
+  }
+  .ad_kt4 .ad_kt4_img .tablet_img {
+    display: none;
+  }
+  .ad_kt4 .ad_kt4_img .mobile_img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+  .ktown4u_offline .offline-text {
+    background-image: linear-gradient( -225deg, rgba(93, 159, 255, 0.8) 0%, rgba(184, 220, 255, 0.8) 48%, rgba(107, 187, 255, 0.8) 100% );
   }
   .new_life {
     padding: 80px 30px;
@@ -2465,6 +2562,16 @@ legend {
   .preorder-left {
     margin-bottom: 50px;
   }
+  .ad_kt4 .ad_kt4_img .mobile_img {
+    display: none;
+  }
+  .ad_kt4 .ad_kt4_img .mobile_img2 {
+    display: block;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
   .new_life {
     padding: 50px 30px;
   }
@@ -2538,6 +2645,12 @@ legend {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
+  }
+  .ktown4u_offline .ktown4u_offline-wrap {
+    background-position: 27% 11%;
+  }
+  .ktown4u_offline .offline-text .offline_content {
+    font-size: 15px;
   }
   .brand-head .new_life-header_taginfo {
     width: 59%;

@@ -12,8 +12,21 @@ if ($is_nogood) $colspan++;
 add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0);
 ?>
 
+<!-- 버튼 시작 -->
+
+<div class="list_btn_main container">
+  <div class="list-btn_wrap">
+    <div class="lst-btn "></div>
+    <div class="lst-btn"></div>
+    <div class="lst-btn"></div>
+    <div class="lst-btn"></div>
+  </div>
+</div>
+
+
+
 <!-- 게시판 목록 시작 { -->
-<div id="bo_list" style="width:<?php echo $width; ?>">
+<div id="bo_list" class="container">
 
     <!-- 게시판 카테고리 시작 { -->
     <?php if ($is_category) { ?>
@@ -85,7 +98,7 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
             <th scope="col">번호</th>
             <th scope="col">제목</th>
             <!-- <th scope="col">글쓴이</th> -->
-            <th scope="col"><?php echo subject_sort_link('wr_hit', $qstr2, 1) ?>조회 </a></th>
+            <!-- <th scope="col"><?php echo subject_sort_link('wr_hit', $qstr2, 1) ?>조회 </a></th> -->
             <?php if ($is_good) { ?><th scope="col"><?php echo subject_sort_link('wr_good', $qstr2, 1) ?>추천 </a></th><?php } ?>
             <?php if ($is_nogood) { ?><th scope="col"><?php echo subject_sort_link('wr_nogood', $qstr2, 1) ?>비추천 </a></th><?php } ?>
             <th scope="col"><?php echo subject_sort_link('wr_datetime', $qstr2, 1) ?>날짜  </a></th>
@@ -143,7 +156,7 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
                 </div>
             </td>
             <!-- <td class="td_name sv_use"><?php echo $list[$i]['name'] ?></td> -->
-            <td class="td_num"><?php echo $list[$i]['wr_hit'] ?></td>
+            <!-- <td class="td_num"><?php echo $list[$i]['wr_hit'] ?></td> -->
             <?php if ($is_good) { ?><td class="td_num"><?php echo $list[$i]['wr_good'] ?></td><?php } ?>
             <?php if ($is_nogood) { ?><td class="td_num"><?php echo $list[$i]['wr_nogood'] ?></td><?php } ?>
             <td class="td_datetime"><?php echo $list[$i]['datetime2'] ?></td>

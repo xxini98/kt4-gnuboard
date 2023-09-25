@@ -16,7 +16,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-size: 0.75em;
+  font-size: 15px;
   /* font-family: 'Malgun Gothic', dotum, sans-serif; */
   background: var(--w);
 }
@@ -247,7 +247,7 @@ header {
 }
 #logo a {
   display: block;
-  width: 100px;
+  width: 90px;
   height: 90px;
   background: url(/gnuboard5/images/comm/MAIN_LOGO.png) 0 50% / contain
     no-repeat;
@@ -257,17 +257,23 @@ header {
 #search_all {
   display: none;
   position: absolute;
-  top: 91px;
-  left: 0;
-  right: 0;
-  z-index: 10;
-  background: black;
-  border-bottom: 1px solid var(--b);
+  top: 60px;
+  right: 60px;
+  padding: 10px;
+  border-radius: 30px;
+  background: var(--secondary);
 }
-.hd_sch_wr {
-  padding: 30px 0;
-  width: 445px;
-  margin: 0 auto;
+#search_all::before {
+  content: '';
+  position: absolute;
+  top: -11px;
+  left: 110px;
+  width: 0px;
+  height: 0px;
+  z-index: -1;
+  border-bottom: 30px solid var(--secondary);
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
 }
 #hd_sch h3 {
   position: absolute;
@@ -281,23 +287,23 @@ header {
 }
 #hd_sch #sch_stx {
   float: left;
-  width: 385px;
+  width: 225px;
   height: 45px;
   padding-left: 10px;
   border-radius: 30px 0 0 30px;
-  background: #2c2c2c;
+  background: var(--w);
   border: 0;
   border-right: 0;
   font-size: 1.25em;
-  color: var(--w);
+  color: #151515;
 }
 #hd_sch #sch_submit {
   float: left;
   width: 60px;
   height: 45px;
   border: 0;
-  background: #2c2c2c;
-  color: var(--w);
+  background: var(--w);
+  color: var(--primary);
   border-radius: 0 30px 30px 0;
   cursor: pointer;
   font-size: 16px;
@@ -474,6 +480,20 @@ header {
   margin-left: 20px;
   background: var(--w);
 }
+.util .gnb_search_btn.close {
+  position: relative;
+  background: var(--secondary);
+}
+.util .gnb_search_btn.close::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  transform: translate(-50%, -50%);
+  background-size: cover;
+  background-image: url(https://iammes.cafe24.com/gnuboard5/images/comm/blue_x.svg);}
 .util .gnb_btn:hover {
   width: 50px;
   height: 50px;
@@ -527,6 +547,54 @@ header {
   background-size: cover;
   background-image: url(https://iammes.cafe24.com/gnuboard5/images/comm/blue_search.svg);
 }
+.gnb_mypage_btn:hover .myonly {
+  display: block;
+}
+.gnb_mypage_btn .myonly {
+  position: absolute;
+  top: 50px;
+  left: -25px;
+  display: none;
+  width: 100px;
+  text-align: left;
+  border-radius: 25px;
+  padding: 10px 20px;
+  background: var(--secondary);
+}
+.myonly li a {
+  line-height: 30px;
+}
+.myonly li:hover a {
+  font-weight: 900;
+  color: var(--w);
+}
+.myonly::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: -41px;
+  left: -20%;
+  width: 50px;
+  height: 50px;
+  z-index: -1;
+  border-radius: 50%;
+  box-shadow: 25px 15px 0px 0px var(--secondary);
+}
+.myonly::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: -41px;
+  left: 70%;
+  width: 50px;
+  height: 50px;
+  z-index: -1;
+  border-radius: 50%;
+  transform: scaleX(-1);
+
+  box-shadow: 25px 15px 0px 0px var(--secondary);
+}
+
 .gnb_1dli .bg {
   display: none;
   position: absolute;
@@ -695,10 +763,13 @@ a.gnb_2da:hover {
 #gnb_all .gnb_al_li {
   /* float: left; */
   width: 50%;
-  padding: 20px 10px 0;
+  padding: 50px 10px 0;
   /* border-left: 1px solid #e7eeef; */
 }
 #gnb_all .gnb_al_li > ul {
+  display: none;
+}
+#gnb_all .gnb_al_li.on > ul {
   display: block;
 }
 #gnb_all .gnb_al_li .gnb_al_a {
@@ -2102,32 +2173,69 @@ textarea.required {
 }
 
 /* 그리드가 1440px일 경우 1440px 이하 미디어쿼리부터! */
+@media screen and (max-width: 1600px) {
+  #gnb .gnb_1dli {
+    line-height: 35px;
+  }
+  .gnb_1da {
+    font-size: 13px;  
+  }
+}
 @media screen and (max-width: 1440px) {
-  #gnb .gnb_wrap {
-    display: none;
+  .util .gnb_btn {
+    margin-left: 15px;
+  }
+  #search_all {
+    right: 45px;
+  }
+  #gnb_all .gnb_nav_b{
+    margin-left: 15px;
+  }
+  #gnb_all .gnb_mypage_btn {
+    right: 94px;
+  }
+  #gnb_all .gnb_cart_btn{
+    right: 159px;
+  }
+  #gnb_all .gnb_search_btn {
+    right: 224px;
   }
 }
 
 /* 1280px 이하일 경우 */
-@media screen {
+@media screen and (max-width : 1280px){
+  #gnb #gnb_1dul {
+    display: none;
+  }
+  #logo a {
+    width: 80px;
+    height: 80px;
+  }
 }
 
 /* tablet */
 /* 1024px 이하일 경우 */
 @media screen and (max-width: 1024px) {
-  #gnb_all .gnb_al_li {
-    float: none;
+  #gnb_all .gnb_al_li .gnb_al_a:hover::after {
+    height: 6px;
   }
 }
 
 /* mobile */
-@media screen and (max-width: 744px) {
-  /* #hd_pop,
-    .inner,
-    #container_wr,
-    #ft_wr {
-        padding: 0 20px;
-    } */
+@media screen and (max-width: 768px) {
+  #logo a {
+    width: 70px;
+    height: 60px;
+  }
+  #gnb_all .gnb_al_li {
+    padding: 30px 10px 0;
+  }
+  .util .gnb_btn {
+    display: none;
+  }
+  .util .gnb_menu_btn {
+    display: block;
+  }
 }
 
 /* 작은 mobile */

@@ -37,27 +37,7 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
     }
     ?>
 
-<div id="tnb">
-        <div class="inner">
-			<ul id="hd_qnb">
-	            <li><a href="<?php echo G5_BBS_URL ?>/faq.php">FAQ</a></li>
-	            <li><a href="<?php echo G5_BBS_URL ?>/qalist.php">Q&A</a></li>
-	            <!-- <li><a href="<?php echo G5_BBS_URL ?>/new.php">새글</a></li> -->
-	            <!-- <li><a href="<?php echo G5_BBS_URL ?>/current_connect.php" class="visit">접속자<strong class="visit-num"><?php echo connect(); // 현재 접속자수, 테마의 스킨을 사용하려면 스킨을 theme/basic 과 같이 지정 ?></strong></a></li> -->
-                <?php if ($is_member) {  ?>
-                <li><a href="<?php echo G5_BBS_URL ?>/member_confirm.php?url=<?php echo G5_BBS_URL ?>/register_form.php">마이페이지</a></li>
-                <li><a href="<?php echo G5_BBS_URL ?>/logout.php">로그아웃</a></li>
-                <?php if ($is_admin) {  ?>
-                <li class="tnb_admin"><a href="<?php echo correct_goto_url(G5_ADMIN_URL); ?>">관리자</a></li>
-                <?php }  ?>
-                <?php } else {  ?>
-                <li><a href="<?php echo G5_BBS_URL ?>/register.php">회원가입</a></li>
-                <li><a href="<?php echo G5_BBS_URL ?>/login.php">로그인</a></li>
-                <?php }  ?>
-            </ul>
-            
-		</div>
-    </div>
+
 </div>
 
   <header>
@@ -65,7 +45,7 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
         <div class="js-sticky-widget">
           <div class="inner">
             <div id="logo">
-              <a href="https://xxini.me/KT4">Ktwon4u - 케이타운포유</a>
+              <a href="https://iammes.cafe24.com/gnuboard5/">Ktwon4u - 케이타운포유</a>
             </div>
             <div class="util">
                <button type="button" class="gnb_btn gnb_search_btn" title="검색">
@@ -74,9 +54,23 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
                <button type="button" class="gnb_btn gnb_cart_btn" title="장바구니">
               <span class="sound_only">장바구니</span>
               </button>
-               <button type="button" class="gnb_btn gnb_mypage_btn" title="마이페이지">
-              <span class="sound_only">마이페이지</span>
-              </button>
+               
+              <button type="button" class="gnb_btn gnb_mypage_btn" title="마이페이지">
+                <span class="sound_only">마이페이지</span>
+                <div class="myonly">
+                  <?php if ($is_member) {  ?>
+                <li><a href="<?php echo G5_BBS_URL ?>/member_confirm.php?url=<?php echo G5_BBS_URL ?>/register_form.php" class="only-log log_mypage   ">마이페이지</a></li>
+                <li><a href="<?php echo G5_BBS_URL ?>/logout.php" class="only-log log_mypage">로그아웃</a></li>
+                <?php if ($is_admin) {  ?>
+                <li class="tnb_admin"><a href="<?php echo correct_goto_url(G5_ADMIN_URL); ?>" class="only-log log_mypage">관리자</a></li>
+                <?php }  ?>
+                <?php } else {  ?>
+                <li><a href="<?php echo G5_BBS_URL ?>/register.php">회원가입</a></li>
+                <li><a href="<?php echo G5_BBS_URL ?>/login.php">로그인</a></li>
+                <?php }  ?>
+                </div>
+                </button>
+              
               <button type="button" class="gnb_btn gnb_menu_btn" title="전체메뉴">
                 <span class="sound_only">전체메뉴열기</span>
               </button> 
@@ -96,6 +90,7 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
                     $(".gnb_search_btn").on("click", function(event){
                         event.stopPropagation(); // 이벤트 버블링 차단
                         $("#search_all").toggle();
+                        $(this).toggleClass("close")
                     });
 
                   });
@@ -183,15 +178,16 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
                 </ul>
                 <button type="button" class="gnb_nav_b gnb_search_btn"></button>
                 <button type="button" class="gnb_nav_b gnb_cart_btn"></button>
-                <button type="button" class="gnb_nav_b gnb_mypage_btn"></button>
+                <a href="<?php echo G5_BBS_URL ?>/member_confirm.php?url=<?php echo G5_BBS_URL ?>/register_form.php" class="only-log log_mypage   "> <button type="button" class="gnb_nav_b gnb_mypage_btn"></button></a>
+               
                 <button type="button" class="gnb_nav_b gnb_close_btn"></button>
                 <script>
                   $(function (){
                     $(".gnb_al_li a").on("click",function(){
-                      $(".gnb_al_li > ul").addClass("on")
+                      $(".gnb_al_li").addClass("on")
                     })
                     $(".gnb_al_li a").on("click",function(){
-                      $(".gnb_al_li > ul").removeClass("on")
+                      $(".gnb_al_li").removeClass("on")
                       $(this).parent().addClass("on")
                     })
                   })

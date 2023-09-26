@@ -8,7 +8,7 @@ add_stylesheet('<link rel="stylesheet" href="'.G5_JS_URL.'/owlcarousel/owl.carou
 ?>
 
 <!-- 인기검색어 시작 { -->
-<section id="popular">
+<!-- <section id="popular">
     <h2>인기검색어</h2>
     <div class="popular_inner">
 	    <ul>
@@ -27,7 +27,7 @@ add_stylesheet('<link rel="stylesheet" href="'.G5_JS_URL.'/owlcarousel/owl.carou
             <a href="#" class="pp-prev"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
         </span>
     </div>
-</section>
+</section> -->
 
 <?php if (isset($list) && $list && is_array($list)) { //게시물이 있다면 ?>
 <script>

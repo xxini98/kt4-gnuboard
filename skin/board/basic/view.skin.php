@@ -10,8 +10,25 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
 
 <!-- 게시물 읽기 시작 { -->
 
-<article id="bo_v" style="width:<?php echo $width; ?>">
-    <header>
+<article id="bo_v" class="container">
+<div class="list_btn_main">
+      <ul class="list_btn_wrap">
+        <li class="lst_btn bbs-wrap on">
+          <a href="#" class="a_lst bbs-a">공지사항</a>
+        </li>
+        <li class="lst_btn oto-wrap">
+          <a href="#" class="a_lst oto-a">1:1문의</a>
+        </li>
+        <li class="lst_btn qna-wrap">
+          <a href="#" class="a_lst qna-a">Q&A</a>
+        </li>
+        <li class="lst_btn faq-wrap">
+          <a href="#" class="a_lst fqa-a">FAQ</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="view_head">
         <h2 id="bo_v_title">
             <?php if ($category_name) { ?>
             <span class="bo_v_cate"><?php echo $view['ca_name']; // 분류 출력 끝 ?></span> 
@@ -21,7 +38,8 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
             echo cut_str(get_text($view['wr_subject']), 70); // 글제목 출력
             ?></span>
         </h2>
-    </header>
+        <strong class="if_date"><span class="sound_only">작성일</span><?php echo date("20y-m-d", strtotime($view['wr_datetime'])) ?></strong>
+    </div>
 
     <section id="bo_v_info">
         <h2>페이지 정보</h2>
@@ -31,7 +49,7 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
         		<span class="sound_only">작성자</span> <strong><?php echo $view['name'] ?><?php if ($is_ip_view) { echo "&nbsp;($ip)"; } ?></strong><br>
        		 	<span class="sound_only">댓글</span><strong><a href="#bo_vc"> <i class="fa fa-commenting-o" aria-hidden="true"></i> <?php echo number_format($view['wr_comment']) ?>건</a></strong>
         		<span class="sound_only">조회</span><strong><i class="fa fa-eye" aria-hidden="true"></i> <?php echo number_format($view['wr_hit']) ?>회</strong>
-        		<strong class="if_date"><span class="sound_only">작성일</span><i class="fa fa-clock-o" aria-hidden="true"></i> <?php echo date("y-m-d H:i", strtotime($view['wr_datetime'])) ?></strong>
+        	
     		</div>
     	</div>
 

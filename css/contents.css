@@ -1,27 +1,26 @@
 @charset "UTF-8";
 @import url(reset.css);
-#hd_pop,
+/* #hd_pop,
 #tnb .inner,
 #container,
 #ft_wr,
 #container_title,
-.container {
+ {
     width: 100%;
     max-width: 1260px;
     margin: 0 auto;
-}
+} */
 @media screen and (max-width: 1280px) {
-    #hd_pop,
+    /* #hd_pop,
     #tnb .inner,
     #container,
     #ft_wr,
     #container_title,
-    .container,
     #hd_wrapper {
         max-width: none;
         width: 96%;
         margin: 0 auto;
-    }
+    } */
 }
 @media screen and (max-width: 768px) {
     #hd_pop,
@@ -29,7 +28,7 @@
     #container,
     #ft_wr,
     #container_title,
-    .container,
+
     #hd_wrapper {
         width: 90%;
     }
@@ -104,9 +103,9 @@
     background-color: #fff;
 }
 
-.sec-g .container {
+/* .sec-g .container {
     padding: 50px 0;
-}
+} */
 
 .sec-g .sec-tit {
     font-size: 30px;

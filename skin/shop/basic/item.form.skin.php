@@ -17,7 +17,7 @@ add_stylesheet('<link rel="stylesheet" href="'.G5_SHOP_CSS_URL.'/style.css">', 0
 	        <?php
 	        $big_img_count = 0;
 	        $thumbnails = array();
-	        for($i=1; $i<=10; $i++) {
+	        for($i=2; $i<=10; $i++) {
 	            if(!$it['it_img'.$i])
 	                continue;
 	

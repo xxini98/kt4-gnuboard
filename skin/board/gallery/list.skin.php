@@ -8,7 +8,30 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
 
 
 <!-- 게시판 목록 시작 { -->
-<div id="bo_gall" style="width:<?php echo $width; ?>">
+<div id="bo_gall" class="container">
+    <div class="gall_btn_main">
+      <ul class="gall_btn_wrap">
+        <li class="gall_btn list-wrap on">
+          <a href="#" class="gall_lst bbs-a">이벤트 목록</a>
+        </li>
+        <li class="gall_btn winner-wrap">
+          <a href="#" class="gall_lst oto-a">당첨자 발표</a>
+        </li>
+      </ul>
+    </div>
+    <div class="gall_btn_sub">
+      <ul class="gall_sub_wrap">
+        <li class="gall_sub all_wrap on">
+          <a href="#" class="sub_lst all-a">전체</a>
+        </li>
+        <li class="gall_sub ing_wrap">
+          <a href="#" class="sub_lst ing-a">진행 중 이벤트</a>
+        </li>
+        <li class="gall_sub ed_wrap">
+          <a href="#" class="sub_lst ed-a">종료된 이벤트</a>
+        </li>
+      </ul>
+    </div>
 
     <?php if ($is_category) { ?>
     <nav id="bo_cate">

@@ -2664,6 +2664,11 @@ legend {
     top: 5px;
   }
 }
+
+.item_view {
+  padding: 0;
+}
+
 .itemview-main {
   display: flex;
   width: 100%;
@@ -2677,8 +2682,8 @@ legend {
   width: 50%;
 }
 .itemview-left .itemalbum-images {
-  width: 640px;
-  height: 640px;
+  width: 100%;
+  aspect-ratio: 1/1;
   border-radius: 40px;
   border: 1px solid #dddddd;
   overflow: hidden;
@@ -2716,10 +2721,10 @@ legend {
   object-fit: cover;
 }
 .itemview-left .artist_goto .artist_goto-wrap .artist_goto-text {
+  width: 510px;
   margin-left: 30px;
 }
 .itemview-left .artist_goto .artist_goto-wrap .artist_goto-arrow {
-  margin-left: 280px;
   color: #999;
 }
 
@@ -2950,12 +2955,264 @@ legend {
 }
 .kt4_all_info-wrap .kt4_delivery_information {
   width: 100%;
-  height: 100px;
   padding: 20px 65px;
   margin-bottom: 60px;
   border-radius: 80px;
   background: #eee;
+  text-align: center;
 }
+.kt4_all_info-wrap .kt4_delivery_information .kt4_delivery-info .delivery-tit {
+  display: block;
+  font-weight: 900;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+.kt4_all_info-wrap .kt4_delivery_information .kt4_delivery-info .deliveryinfo {
+  display: block;
+  font-weight: 400;
+  font-size: 15px;
+}
+.kt4_all_info-wrap .album_info {
+  margin-bottom: 60px;
+}
+.kt4_all_info-wrap .album_info-1 .album-artistinfo {
+  display: block;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+.kt4_all_info-wrap .album_info-3 {
+  margin-bottom: 0;
+}
+
+.album_details_images {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.kt4_cont-wrap {
+  margin-bottom: 85px;
+}
+.kt4_cont-wrap .kt4_cont {
+  margin-bottom: 60px;
+}
+.kt4_cont-wrap .kt4_cont .kt4_cont-return {
+  margin-bottom: 0;
+}
+.kt4_cont-wrap .kt4_packing {
+  width: 100%;
+  text-align: center;
+}
+
+@media screen and (max-width: 1440px) {
+  .itemview-left .artist_goto .artist_goto-wrap .artist_goto-text {
+    width: 420px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .item_view {
+    padding: 80px 50px;
+  }
+  .itemview-left .artist_goto .artist_goto-wrap .artist_goto-text {
+    width: 460px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .item_view {
+    padding: 0 30px;
+  }
+  .itemview-right .info-tit .info-title .info-album {
+    font-size: 18px;
+  }
+  .itemview-right .info-tit .info-title .info-albumtit {
+    font-size: 14px;
+  }
+  .itemview-right .info-price .discount_rate {
+    font-size: 24px;
+  }
+  .itemview-right .info-price .final_price {
+    font-size: 24px;
+  }
+  .itemview-right .info-price .price_origin {
+    font-size: 16px;
+  }
+  .kt4_all_info-wrap
+    .kt4_delivery_information
+    .kt4_delivery-info
+    .delivery-tit {
+    font-size: 18px;
+  }
+  .itemview-right .product_info_down .kt4_info-total-price {
+    padding: 20px 0 70px 0;
+  }
+  .itemview-left .artist_goto .artist_goto-wrap .artist_goto-text {
+    width: 360px;
+  }
+  .itemview-left .artist_goto .artist_goto-wrap .artist_goto-arrow {
+    margin-left: 0;
+  }
+  .kt4_all_info-wrap
+    .kt4_delivery_information
+    .kt4_delivery-info
+    .delivery-tit {
+    margin: 5px 0;
+  }
+  .kt4_all_info-wrap
+    .kt4_delivery_information
+    .kt4_delivery-info
+    .deliveryinfo {
+    font-size: 13px;
+  }
+  .album_contentsinfo,
+  .album_detailinfo,
+  .album_trackinfo,
+  .cont-deliveryinfo,
+  .pipninfo,
+  .cont-cancelinfo,
+  .cont-changeinfo,
+  .cont-errorinfo,
+  .cont-breakinfo,
+  .cont-reviewinfo,
+  .cont-returninfo {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .item_view {
+    margin-top: -50px;
+    padding: 0 30px;
+  }
+  .itemview-main {
+    flex-direction: column;
+  }
+  .itemview-left,
+  .itemview-right {
+    width: auto;
+  }
+  .itemview-right .info-details .info-detail-tit {
+    margin-right: 0px;
+  }
+  .artist_goto {
+    display: none;
+  }
+  .kt4_associate-wrap .kt4_associate-image {
+    width: 80%;
+  }
+  .kt4_all_info-wrap
+    .kt4_delivery_information
+    .kt4_delivery-info
+    .deliveryinfo {
+    white-space: initial;
+  }
+  .kt4_all_info-wrap .kt4_delivery_information {
+    height: auto;
+    padding: 20px 55px;
+  }
+  .info-wrap {
+    padding: 0;
+    border-radius: 0;
+    border: 0px solid #000;
+    padding: 60px 0;
+    border-top: 2px solid #eee;
+    border-bottom: 2px solid #eee;
+  }
+  .album_details_images {
+    width: 100%;
+  }
+  .album_details_images img {
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+  .kt4_cont-wrap .kt4_cont {
+    border-top: 0px;
+    padding-top: 0;
+  }
+  .kt4_cont-wrap .kt4_packing img {
+    width: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+  }
+}
+@media screen and (max-width: 428px) {
+  .itemview-right .info-tit .info-title .info-album {
+    font-size: 16px;
+  }
+  .itemview-right .info-price .discount_rate,
+  .itemview-right .info-price .final_price {
+    font-size: 20px;
+  }
+  .itemview-right .info-price .price_origin {
+    font-size: 15px;
+  }
+  .itemview-right
+    .count-wrap
+    .count-left
+    .count_button-wrap
+    input[type="number"] {
+    font-size: 16px;
+  }
+  .itemview-right .count-right {
+    font-size: 16px;
+  }
+  .itemview-right .product_info_down .kt4_info-total-price {
+    font-size: 18px;
+  }
+  .itemview-right
+    .product_info_down
+    .kt4_info-total-price
+    .kt4_info-price
+    .val {
+    font-size: 20px;
+  }
+  .itemview-right
+    .product_info_down
+    .kt4_info-total-price
+    .kt4_info-price
+    .unit {
+    font-size: 16px;
+  }
+  .itemview-right .product_info_down .kt4_product_btn_area .kt4_button {
+    line-height: 50px;
+    font-size: 18px;
+  }
+  .kt4_associate-wrap .kt4_associate-image {
+    width: 100%;
+  }
+  .kt4_associate-wrap .kt4_associate-text {
+    font-size: 14px;
+  }
+  .kt4_all_info-wrap .kt4_delivery_information {
+    padding: 20px;
+  }
+} /*# sourceMappingURL=comm.css.map */
+
+.info-wrap {
+  width: 100%;
+  height: auto;
+  margin-bottom: 60px;
+  padding: 60px;
+  border-radius: 81px;
+  border: 1px solid #eee;
+}
+
+.detail_info-tit {
+  display: block;
+  margin-bottom: 20px;
+  font-weight: 900;
+  font-size: 22px;
+}
+
+.kt4_all_info-wrap {
+  width: 100%;
+  margin-top: 60px;
+}
+/* .kt4_all_info-wrap .kt4_delivery_information {
+  width: 100%;
+  padding: 20px 65px;
+  margin-bottom: 60px;
+  border-radius: 80px;
+  background: #eee;
+} */
 .kt4_all_info-wrap .kt4_delivery_information .kt4_delivery-info .delivery-tit {
   display: block;
   font-weight: 900;

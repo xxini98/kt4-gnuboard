@@ -40,6 +40,7 @@
   font-weight: 900;
   color: #151515;
 }
+
 .sch_bar {
   display: none;
   position: relative;
@@ -58,7 +59,7 @@
 }
 
 #bo_list {
-  padding-top: 45px;
+  /* padding-top: 45px; */
 }
 #bo_list:after {
   display: block;
@@ -264,6 +265,7 @@
 
 /* 게시판 목록 공통 */
 .selec_chk {
+  display: none;
   position: absolute;
   top: 0;
   left: 0;
@@ -824,15 +826,14 @@ html.no-overflowscrolling #autosave_pop {
   line-height: 2.2em;
 }
 
-.view_head{
+.view_head {
   width: 100%;
   padding: 30px;
   border-radius: 50px;
-  background: #FBFBFB;
+  background: #fbfbfb;
 }
 
 #bo_v_title {
-
 }
 #bo_v_title .bo_v_cate {
   display: inline-block;
@@ -847,6 +848,13 @@ html.no-overflowscrolling #autosave_pop {
   font-size: 20px;
   margin: 5px 0 0;
   word-break: break-all;
+}
+
+#bo_v_sec {
+  padding: 10px 30px;
+  border: 2px solid #eeeeee;
+  border-radius: 50px;
+  margin-top: 30px;
 }
 
 #bo_v_info {
@@ -873,15 +881,17 @@ html.no-overflowscrolling #autosave_pop {
   float: left;
 }
 #bo_v_info .profile_info .pf_img {
+  /* display: none; */
   float: left;
   margin-right: 10px;
 }
 #bo_v_info .profile_info .pf_img img {
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  width: 25px;
+  height: 25px;
 }
 #bo_v_info .profile_info .profile_info_ct {
+  display: none;
   float: left;
   padding: 5px 0;
   line-height: 18px;
@@ -889,7 +899,7 @@ html.no-overflowscrolling #autosave_pop {
 
 #bo_v_info strong {
   display: inline-block;
-  margin: 0 10px 0 0;
+  margin: 3px 10px 0 0;
   font-weight: normal;
 }
 #bo_v_info .sv_member,
@@ -1064,6 +1074,7 @@ html.no-overflowscrolling #autosave_pop {
 }
 
 .bo_v_com {
+  display: none;
   margin: 20px 0;
   float: right;
 }
@@ -1287,6 +1298,7 @@ html.no-overflowscrolling #autosave_pop {
 
 /* 게시판 댓글 */
 .cmt_btn {
+  display: none;
   width: 100%;
   text-align: left;
   border: 0;
@@ -1329,6 +1341,7 @@ html.no-overflowscrolling #autosave_pop {
   height: 2px;
 }
 #bo_vc {
+  display: none;
 }
 #bo_vc h2 {
   position: absolute;
@@ -1607,8 +1620,14 @@ html.no-overflowscrolling #autosave_pop {
 }
 
 /*글쓰기*/
+#bo_w #fwrite {
+  border: 2px solid #eeeeee;
+  border-radius: 30px;
+  padding: 20px;
+}
 #bo_w .bo_v_option li {
-  display: inline-block;
+  display: none;
+  /* display: inline-block; */
   float: left;
   text-align: left;
   margin: 0 5px 0 0;
@@ -1637,6 +1656,8 @@ html.no-overflowscrolling #autosave_pop {
   content: "";
 }
 #bo_w .bo_w_info .frm_input {
+  border-radius: 50px;
+  padding: 20px;
   float: left;
   margin-bottom: 1%;
 }
@@ -1652,6 +1673,8 @@ html.no-overflowscrolling #autosave_pop {
 }
 #bo_w .bo_w_tit .frm_input {
   padding-right: 120px;
+  border-radius: 50px;
+  padding: 20px;
 }
 #bo_w .bo_w_tit #btn_autosave {
   position: absolute;
@@ -1677,8 +1700,8 @@ html.no-overflowscrolling #autosave_pop {
 }
 #bo_w .bo_w_flie .lb_icon {
   position: absolute;
-  top: 0px;
-  left: 0px;
+  top: 2px;
+  left: 10px;
   border-radius: 3px 0 0 3px;
   height: 38px;
   line-height: 38px;
@@ -1688,17 +1711,19 @@ html.no-overflowscrolling #autosave_pop {
   color: #b2b2b2;
 }
 #bo_w .bo_w_flie .frm_file {
-  padding-left: 50px;
-  margin-top: 3px;
+  padding-left: 40px;
+  margin-top: -20px;
 }
 #bo_w .bo_w_flie .file_wr {
+  border-radius: 50px;
+  padding: 20px;
   position: relative;
   border: 1px solid #ccc;
   background: #fff;
-  color: #000;
+  color: #151515;
   vertical-align: middle;
-  border-radius: 3px;
-  padding: 5px;
+  /* border-radius: 3px; */
+  /* padding: 5px; */
   height: 40px;
   margin: 0;
 }
@@ -1725,4 +1750,19 @@ html.no-overflowscrolling #autosave_pop {
 #bo_w .btn_cancel {
   border-radius: 3px;
   font-size: 1.167em;
+}
+
+@media screen and (max-width: 1024px) {
+  #bo_list {
+    padding: 80px 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .a_lst {
+    width: 150px;
+  }
+  #bo_list {
+    padding: 80px 30px;
+  }
 }

@@ -10,8 +10,32 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
 
 <!-- 게시물 읽기 시작 { -->
 
-<article id="bo_v" style="width:<?php echo $width; ?>">
-    <header>
+<article id="bo_v" class="container">
+<div class="gall_btn_main">
+      <ul class="gall_btn_wrap">
+        <li class="gall_btn list-wrap on">
+          <a href="#" class="gall_lst bbs-a">이벤트 목록</a>
+        </li>
+        <li class="gall_btn winner-wrap">
+          <a href="#" class="gall_lst oto-a">당첨자 발표</a>
+        </li>
+      </ul>
+    </div>
+    <div class="gall_btn_sub">
+      <ul class="gall_sub_wrap">
+        <li class="gall_sub all_wrap on">
+          <a href="#" class="sub_lst all-a">전체</a>
+        </li>
+        <li class="gall_sub ing_wrap">
+          <a href="#" class="sub_lst ing-a">진행 중 이벤트</a>
+        </li>
+        <li class="gall_sub ed_wrap">
+          <a href="#" class="sub_lst ed-a">종료된 이벤트</a>
+        </li>
+      </ul>
+    </div>
+    <div class="view_head">
+      <div class="head_ul">
         <h2 id="bo_v_title">
             <?php if ($category_name) { ?>
             <span class="bo_v_cate"><?php echo $view['ca_name']; // 분류 출력 끝 ?></span> 
@@ -21,30 +45,18 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
             echo cut_str(get_text($view['wr_subject']), 70); // 글제목 출력
             ?></span>
         </h2>
-    </header>
-
-    <section id="bo_v_info">
-        <h2>페이지 정보</h2>
-        <div class="profile_info">
-        	<div class="pf_img"><?php echo get_member_profile_img($view['mb_id']) ?></div>
-        	<div class="profile_info_ct">
-        		<span class="sound_only">작성자</span> <strong><?php echo $view['name'] ?><?php if ($is_ip_view) { echo "&nbsp;($ip)"; } ?></strong><br>
-       		 	<span class="sound_only">댓글</span><strong><a href="#bo_vc"> <i class="fa fa-commenting-o" aria-hidden="true"></i> <?php echo number_format($view['wr_comment']) ?>건</a></strong>
-        		<span class="sound_only">조회</span><strong><i class="fa fa-eye" aria-hidden="true"></i> <?php echo number_format($view['wr_hit']) ?>회</strong>
-        		<strong class="if_date"><span class="sound_only">작성일</span><i class="fa fa-clock-o" aria-hidden="true"></i> <?php echo date("y-m-d H:i", strtotime($view['wr_datetime'])) ?></strong>
-    		</div>
-    	</div>
-
-    	<!-- 게시물 상단 버튼 시작 { -->
-	    <div id="bo_v_top">
+        <div id="bo_v_top">
 	        <?php ob_start(); ?>
 
 	        <ul class="btn_bo_user bo_v_com">
-				<li><a href="<?php echo $list_href ?>" class="btn_b01 btn" title="목록"><i class="fa fa-list" aria-hidden="true"></i><span class="sound_only">목록</span></a></li>
-	            <?php if ($reply_href) { ?><li><a href="<?php echo $reply_href ?>" class="btn_b01 btn" title="답변"><i class="fa fa-reply" aria-hidden="true"></i><span class="sound_only">답변</span></a></li><?php } ?>
-	            <?php if ($write_href) { ?><li><a href="<?php echo $write_href ?>" class="btn_b01 btn" title="글쓰기"><i class="fa fa-pencil" aria-hidden="true"></i><span class="sound_only">글쓰기</span></a></li><?php } ?>
+				<li class="gal-list"><a href="<?php echo $list_href ?>" class="btn_b01 btn" title="목록"><i class="fa fa-list" aria-hidden="true"></i><span class="sound_only">목록</span></a></li>
+
+	            <?php if ($reply_href) { ?>
+                <li class="gal-ans"><a href="<?php echo $reply_href ?>" class="btn_b01 btn" title="답변"><i class="fa fa-reply" aria-hidden="true"></i><span class="sound_only">답변</span></a></li><?php } ?>
+	            <?php if ($write_href) { ?>
+                <li class="gal-write"><a href="<?php echo $write_href ?>" class="btn_b01 btn" title="글쓰기"><i class="fa fa-pencil" aria-hidden="true"></i><span class="sound_only">글쓰기</span></a></li><?php } ?>
 	        	<?php if($update_href || $delete_href || $copy_href || $move_href || $search_href) { ?>
-	        	<li>
+	        	<li class="">
 	        		<button type="button" class="btn_more_opt is_view_btn btn_b01 btn" title="게시판 리스트 옵션"><i class="fa fa-ellipsis-v" aria-hidden="true"></i><span class="sound_only">게시판 리스트 옵션</span></button>
 		        	<ul class="more_opt is_view_btn"> 
 			            <?php if ($update_href) { ?><li><a href="<?php echo $update_href ?>">수정<i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></li><?php } ?>
@@ -77,6 +89,28 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
 	        ob_end_flush();
 	         ?>
 	    </div>
+        </div>
+        <strong class="if_date">
+          <span class="sound_only">진행기간</span>
+          진행 중 2023-08-14 ~ 2023-08-20 
+        </strong>
+       
+    </div>
+
+    <section id="bo_v_info">
+        <h2>페이지 정보</h2>
+        <div class="profile_info">
+        	<div class="pf_img"><?php echo get_member_profile_img($view['mb_id']) ?></div>
+        	<div class="profile_info_ct">
+        		<span class="sound_only">작성자</span> <strong><?php echo $view['name'] ?><?php if ($is_ip_view) { echo "&nbsp;($ip)"; } ?></strong><br>
+       		 	<span class="sound_only">댓글</span><strong><a href="#bo_vc"> <i class="fa fa-commenting-o" aria-hidden="true"></i> <?php echo number_format($view['wr_comment']) ?>건</a></strong>
+        		<span class="sound_only">조회</span><strong><i class="fa fa-eye" aria-hidden="true"></i> <?php echo number_format($view['wr_hit']) ?>회</strong>
+        	
+    		</div>
+    	</div>
+
+    	<!-- 게시물 상단 버튼 시작 { -->
+	   
 	    <!-- } 게시물 상단 버튼 끝 -->
     </section>
 

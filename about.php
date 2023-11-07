@@ -13,7 +13,7 @@ include_once(G5_PATH.'/head.php');
 
 <!-- 여기 아래부터 모든 HTML 요소 구성 시작 -->
 
-<div class="wrap container">
+<div class="item_view wrap container">
             <section class="itemview-main">
                 <h2 class="blind">
                     NEWJEANS(뉴진스) - 2ND EP [GET UP] [THE POWERPUFF GIRLS X NJ BOX VER] (랜덤버전)

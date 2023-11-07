@@ -72,14 +72,14 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
 	    <?php } ?>
 	
 	    <?php if ($is_email) { ?>
-			<label for="wr_email" class="sound_only">이메일</label>
-			<input type="text" name="wr_email" value="<?php echo $email ?>" id="wr_email" class="frm_input half_input email " placeholder="이메일">
+			<!-- <label for="wr_email" class="sound_only">이메일</label>
+			<input type="text" name="wr_email" value="<?php echo $email ?>" id="wr_email" class="frm_input half_input email " placeholder="이메일"> -->
 	    <?php } ?>
 	    
 	
 	    <?php if ($is_homepage) { ?>
-	        <label for="wr_homepage" class="sound_only">홈페이지</label>
-	        <input type="text" name="wr_homepage" value="<?php echo $homepage ?>" id="wr_homepage" class="frm_input half_input" size="50" placeholder="홈페이지">
+	        <!-- <label for="wr_homepage" class="sound_only">홈페이지</label>
+	        <input type="text" name="wr_homepage" value="<?php echo $homepage ?>" id="wr_homepage" class="frm_input half_input" size="50" placeholder="홈페이지"> -->
 	    <?php } ?>
 	</div>
 	
@@ -160,11 +160,11 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
     </div>
     <?php } ?>
 
-    <div class="btn_confirm write_div">
-        <a href="<?php echo get_pretty_url($bo_table); ?>" class="btn_cancel btn">취소</a>
-        <button type="submit" id="btn_submit" accesskey="s" class="btn_submit btn">작성완료</button>
-    </div>
-    </form>
+  </form>
+  <div class="btn_confirm write_div">
+      <a href="<?php echo get_pretty_url($bo_table); ?>" class="btn_cancel btn">취소</a>
+      <button type="submit" id="btn_submit" accesskey="s" class="btn_submit btn">작성완료</button>
+  </div>
 
     <script>
     <?php if($write_min || $write_max) { ?>

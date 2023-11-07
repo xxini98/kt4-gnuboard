@@ -99,6 +99,7 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
         <caption><?php echo $board['bo_subject'] ?> 목록</caption>
         <thead class="thead-bbs">
         <tr id="tr-bbs">
+      
             <th scope="col" id="th_col" class="th_num">NO.</th>
             <th scope="col" id="th_col" class="th_tit">제목</th>
             <!-- <th scope="col">글쓴이</th> -->
@@ -312,4 +313,3 @@ jQuery(function($){
 });
 </script>
 <?php } ?>
-<!-- } 게시판 목록 끝 -->

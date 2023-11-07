@@ -16,9 +16,8 @@ if (G5_IS_MOBILE) {
 
 include_once(G5_PATH.'/head.php');
 ?>
-
-
         <div class="wrap">
+          <!-- CD 슬라이드 -->
           <section class="main-wrapper">
             <div class="mianslide">
               <h2 class="blind">EVENT</h2>
@@ -45,7 +44,7 @@ include_once(G5_PATH.'/head.php');
                             </p>
                           </div>
                           <div class="slider_info-bottom s1">
-                            <a href="item_view.html">READ MORE</a>
+                            <a href="https://iammes.cafe24.com/gnuboard5/item_view.php">READ MORE</a>
                           </div>
                         </div>
                         <div class="swiper-slide is-content">
@@ -66,7 +65,7 @@ include_once(G5_PATH.'/head.php');
                             </p>
                           </div>
                           <div class="slider_info-bottom s2">
-                            <a href="#">READ MORE</a>
+                          <a href="https://iammes.cafe24.com/gnuboard5/item_view.php">READ MORE</a>
                           </div>
                         </div>
                         <div class="swiper-slide is-content">
@@ -89,7 +88,7 @@ include_once(G5_PATH.'/head.php');
                             </p>
                           </div>
                           <div class="slider_info-bottom s3">
-                            <a href="#">READ MORE</a>
+                          <a href="https://iammes.cafe24.com/gnuboard5/item_view.php">READ MORE</a>
                           </div>
                         </div>
                         <div class="swiper-slide is-content">
@@ -112,7 +111,7 @@ include_once(G5_PATH.'/head.php');
                             </p>
                           </div>
                           <div class="slider_info-bottom s4">
-                            <a href="#">READ MORE</a>
+                          <a href="https://iammes.cafe24.com/gnuboard5/item_view.php">READ MORE</a>
                           </div>
                         </div>
                         <div class="swiper-slide is-content">
@@ -133,7 +132,7 @@ include_once(G5_PATH.'/head.php');
                             </p>
                           </div>
                           <div class="slider_info-bottom s5">
-                            <a href="#">READ MORE</a>
+                          <a href="https://iammes.cafe24.com/gnuboard5/item_view.php">READ MORE</a>
                           </div>
                         </div>
                         <div class="swiper-slide is-content">
@@ -152,7 +151,7 @@ include_once(G5_PATH.'/head.php');
                             </p>
                           </div>
                           <div class="slider_info-bottom s6">
-                            <a href="#">READ MORE</a>
+                          <a href="https://iammes.cafe24.com/gnuboard5/item_view.php">READ MORE</a>
                           </div>
                         </div>
                       </div>
@@ -242,11 +241,12 @@ include_once(G5_PATH.'/head.php');
               </div>
             </div>
           </section>
+          <!-- EVENT TAB -->
           <section class="eventTab-warp ev-g container">
             <h2 class="blind">EVENT</h2>
             <div class="evenTab evt1">
               <div class="eventcontent">
-                <a href="javascript:void(0)">
+                <a href="https://iammes.cafe24.com/gnuboard5/bbs/board.php?bo_table=gallery&wr_id=13">
                   <img
                     src="./images/main/EVENT_STAYC.jpg"
                     alt="STAYC TEENFRESH 컴백 기념 특전 증정"
@@ -264,7 +264,7 @@ include_once(G5_PATH.'/head.php');
             </div>
             <div class="evenTab evt2">
               <div class="eventcontent">
-                <a href="javascript:void(0)">
+              <a href="https://iammes.cafe24.com/gnuboard5/bbs/board.php?bo_table=gallery">
                   <img
                     src="./images/main/EVENT_NCTDREAM.jpg"
                     alt="NCTDREAM ISTJ 온라인 럭키드로우 포토카드 증정"
@@ -282,7 +282,7 @@ include_once(G5_PATH.'/head.php');
             </div>
             <div class="evenTab evt3">
               <div class="eventcontent">
-                <a href="javascript:void(0)">
+              <a href="https://iammes.cafe24.com/gnuboard5/bbs/board.php?bo_table=gallery">
                   <img
                     src="./images/main/EVENT_SEJUNG.jpg"
                     alt="STAYC TEENFRESH 컴백 기념 특전 증정"
@@ -300,7 +300,7 @@ include_once(G5_PATH.'/head.php');
             </div>
             <div class="evenTab evt4">
               <div class="eventcontent">
-                <a href="javascript:void(0)">
+              <a href="https://iammes.cafe24.com/gnuboard5/bbs/board.php?bo_table=gallery">
                   <img
                     src="./images/main/EVENT_V.jpg"
                     alt="STAYC TEENFRESH 컴백 기념 특전 증정"
@@ -317,6 +317,7 @@ include_once(G5_PATH.'/head.php');
               </div>
             </div>
           </section>
+          <!-- PREORDER TAB -->
           <section class="preorder">
             <div class="preorder-wrap container">
               <div class="preorder-left">
@@ -493,6 +494,7 @@ include_once(G5_PATH.'/head.php');
               <div class="swiper-scrollbar is-preorder"></div>
             </div>
           </section>
+          <!-- 광고 (PC, TAB, MOB) -->
           <div class="ad_kt4">
             <a href="#">
               <div class="ad_kt4_img container">
@@ -519,6 +521,7 @@ include_once(G5_PATH.'/head.php');
               </div>
             </a>
           </div>
+          <!-- 신상품  -->
           <section class="new_life new container">
             <div class="new_life-wrap">
               <div class="new_life-header">
@@ -859,6 +862,7 @@ include_once(G5_PATH.'/head.php');
               >
             </div>
           </section>
+          <!-- LIFE STYLE -->
           <section class="new_life life container">
             <div class="new_life-wrap">
               <div class="new_life-header">
@@ -1172,6 +1176,7 @@ include_once(G5_PATH.'/head.php');
               </ul>
             </div>
           </section>
+          <!-- 실시간 차트 -->
           <section class="ktown4u_chart">
             <div class="chart-wrap container">
               <div class="chart-left">
@@ -1425,6 +1430,7 @@ include_once(G5_PATH.'/head.php');
               </div>
             </div>
           </section>
+          <!-- 오프라인 매장 안내 -->
           <section class="ktown4u_offline">
             <div class="ktown4u_offline-wrap">
               <a
@@ -1443,6 +1449,7 @@ include_once(G5_PATH.'/head.php');
               </a>
             </div>
           </section>
+          <!-- BRAND SHOP 슬라이드 -->
           <section class="new_life brandshop container">
             <div class="new_life-wrap">
               <div class="new_life-header brand-head">

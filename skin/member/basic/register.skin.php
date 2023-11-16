@@ -1,3 +1,5 @@
+
+
 <?php
 if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 
@@ -6,7 +8,7 @@ add_stylesheet('<link rel="stylesheet" href="'.$member_skin_url.'/style.css">', 
 ?>
 
 <!-- 회원가입약관 동의 시작 { -->
-<div class="register">
+<div class="register container">
 
     <form  name="fregister" id="fregister" action="<?php echo $register_action_url ?>" onsubmit="return fregister_submit(this);" method="POST" autocomplete="off">
 
